@@ -1,0 +1,104 @@
+[
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "complete.pug",
+        "sha": "cf956ec73fd76645361dade88a796777abf0c00b"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "09a5c21f46d47edb020fff8d4509122902fd208e"
+      }
+    ],
+    "outputSha": "dd57cae66e362ebeb11080243b1a361c5361a763",
+    "input": "complete.pug",
+    "output": [
+      "complete.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "index.pug",
+        "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "09a5c21f46d47edb020fff8d4509122902fd208e"
+      }
+    ],
+    "outputSha": "3a8b28a0f6a52c22de9a51f8b986ef3539732dbf",
+    "input": "index.pug",
+    "output": [
+      "index.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "registration-number.pug",
+        "sha": "7b4563c4b2305381f1caa7bb1db8674af477de89"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "09a5c21f46d47edb020fff8d4509122902fd208e"
+      }
+    ],
+    "outputSha": "8e18897fb2f6a0943545642c56f73556c76b82cd",
+    "input": "registration-number.pug",
+    "output": [
+      "registration-number.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "layout/master.pug",
+        "sha": "09a5c21f46d47edb020fff8d4509122902fd208e"
+      }
+    ],
+    "outputSha": "7b31a18c2130ee2a0269dbf95eb29daa0482862e",
+    "input": "layout/master.pug",
+    "output": [
+      "layout/master.html"
+    ]
+  },
+  {
+    "type": "node-sass@4.12.0::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/main.scss",
+        "sha": "25e0432cae40b076f5e15615820fc44dcaa291d7"
+      },
+      {
+        "file": "styles/reset.scss",
+        "sha": "bcaeb4314baec4cd2031fb9daac3daf6d645755a"
+      }
+    ],
+    "outputSha": "f79fc52a3230805715308b5335696c26c55cb1fa",
+    "input": "styles/main.scss",
+    "output": [
+      "styles/main.css.map",
+      "styles/main.css"
+    ]
+  },
+  {
+    "type": "node-sass@4.12.0::map::minify",
+    "inputSha": [
+      {
+        "file": "styles/reset.scss",
+        "sha": "bcaeb4314baec4cd2031fb9daac3daf6d645755a"
+      }
+    ],
+    "outputSha": "d1f8326d335c8dbcc3656694e5f75de7e3a14ab3",
+    "input": "styles/reset.scss",
+    "output": [
+      "styles/reset.css.map",
+      "styles/reset.css"
+    ]
+  }
+]
