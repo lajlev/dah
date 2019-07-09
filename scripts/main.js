@@ -40,13 +40,4 @@ function showPosition(position) {
       loop()
     }, 1000);
   }());
-
-
-  // navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
-  //   if(PermissionStatus.state == 'granted'){
-  //     window.location.replace("registration-number.html");
-  //   }else{
-  //     console.log('denied');
-  //   }
-  // })
 }

@@ -3,24 +3,6 @@
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
-        "file": "index.pug",
-        "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
-      },
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "3a8b28a0f6a52c22de9a51f8b986ef3539732dbf",
-    "input": "index.pug",
-    "output": [
-      "index.html"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
         "file": "complete.pug",
         "sha": "cf956ec73fd76645361dade88a796777abf0c00b"
       },
@@ -33,6 +15,24 @@
     "input": "complete.pug",
     "output": [
       "complete.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "index.pug",
+        "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
+      }
+    ],
+    "outputSha": "3a8b28a0f6a52c22de9a51f8b986ef3539732dbf",
+    "input": "index.pug",
+    "output": [
+      "index.html"
     ]
   },
   {
@@ -72,18 +72,32 @@
     ]
   },
   {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "layout/master.pug",
+        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
+      }
+    ],
+    "outputSha": "7b31a18c2130ee2a0269dbf95eb29daa0482862e",
+    "input": "layout/master.pug",
+    "output": [
+      "layout/master.html"
+    ]
+  },
+  {
     "type": "node-sass@4.12.0::map::minify",
     "inputSha": [
       {
         "file": "styles/main.scss",
-        "sha": "2ed9216e9048d89f6d89a50e1a1e26b46f3d323b"
+        "sha": "932f19c0f0c1599d85581d36feefd2c08c40135a"
       },
       {
         "file": "styles/reset.scss",
         "sha": "bcaeb4314baec4cd2031fb9daac3daf6d645755a"
       }
     ],
-    "outputSha": "ec4370cbee1550af93126908c3dae95e6a6f982e",
+    "outputSha": "0e0db46681d5eae5f0c1625a3fca3e01d70455c3",
     "input": "styles/main.scss",
     "output": [
       "styles/main.css.map",
@@ -103,20 +117,6 @@
     "output": [
       "styles/reset.css.map",
       "styles/reset.css"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "7b31a18c2130ee2a0269dbf95eb29daa0482862e",
-    "input": "layout/master.pug",
-    "output": [
-      "layout/master.html"
     ]
   }
 ]
