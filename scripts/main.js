@@ -25,14 +25,28 @@ $('#sendRegistrationNumber').click(function(){
 });
 
 function showPosition(position) {
-  console.log("Lat: " + position.coords.latitude);
-  console.log("Lon: " + position.coords.longitude);
-  navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
-    if(PermissionStatus.state == 'granted'){
-      window.location.replace("registration-number.html");
-    }else{
-      console.log('denied');
-    }
-})
-  
+  var crdLat = "";
+  var crdLon = "";
+  crdLat = position.coords.latitude;
+  crdLon = position.coords.longitude;
+  console.log("Lat: " + crdLat);
+  console.log("Lon: " + crdLon);
+
+  (function loop() {
+    setTimeout(function () {
+      if(crdLat) {
+        window.location.replace("registration-number.html");
+      }
+      loop()
+    }, 1000);
+  }());
+
+
+  // navigator.permissions && navigator.permissions.query({name: 'geolocation'}).then(function(PermissionStatus) {
+  //   if(PermissionStatus.state == 'granted'){
+  //     window.location.replace("registration-number.html");
+  //   }else{
+  //     console.log('denied');
+  //   }
+  // })
 }
