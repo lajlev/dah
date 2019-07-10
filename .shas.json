@@ -86,18 +86,33 @@
     ]
   },
   {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.js",
+        "sha": "dae4570807a0e701a542f723781075efe7aa76f1"
+      }
+    ],
+    "outputSha": "30ba67c581d2070d6b6510f80f377c25e9a6e30e",
+    "input": "scripts/main.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
+    ]
+  },
+  {
     "type": "node-sass@4.12.0::map::minify",
     "inputSha": [
       {
         "file": "styles/main.scss",
-        "sha": "932f19c0f0c1599d85581d36feefd2c08c40135a"
+        "sha": "cec9c076aec787eeeb91c9bdf12a76336beb3054"
       },
       {
         "file": "styles/reset.scss",
         "sha": "bcaeb4314baec4cd2031fb9daac3daf6d645755a"
       }
     ],
-    "outputSha": "0e0db46681d5eae5f0c1625a3fca3e01d70455c3",
+    "outputSha": "2c7069a1b90dfe468a49565104bbf814f8e5a1fd",
     "input": "styles/main.scss",
     "output": [
       "styles/main.css.map",

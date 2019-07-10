@@ -52,6 +52,10 @@ input[type=text] {
   padding: 0 15px;
   margin-bottom: 18px;
   text-transform: uppercase;
+
+  &::placeholder {
+    text-transform: none;
+  }
 }
 
 .header,
