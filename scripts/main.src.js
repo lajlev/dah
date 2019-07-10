@@ -1,13 +1,10 @@
 var searchParams = new URLSearchParams(window.location.search);
-var phonenumber = "";
-var registrationNumber = "BC72646";
 var crdLat = "";
 var crdLon = "";
-var result;
 
 if(  searchParams.has('phone') == true ){
-  phonenumber = searchParams.get('phone');
-  console.log("phone: " + phonenumber);
+  phoneNumber = searchParams.get('phone');
+  localStorage.setItem("DahPhoneNumber",phoneNumber);
 }
 
 function getLocation() {
@@ -21,13 +18,9 @@ function getLocation() {
 $(function () {  
   $('#findLocation').click(function(e){
     e.preventDefault();
-    $(this).attr("disabled", true);
+    $(this).addClass('disabled');
     getLocation();
   });
-});
-
-$('#sendRegistrationNumber').click(function(){
-  console.log("send registration number");
 });
 
 function showPosition(position) {
@@ -35,7 +28,8 @@ function showPosition(position) {
   crdLat = position.coords.latitude;
   crdLon = position.coords.longitude;
   
-  sendToSlack();
+  localStorage.setItem("DahCrdLat",crdLat);
+  localStorage.setItem("DahCrdLon",crdLon);
 
   (function loop() {
     setTimeout(function () {
@@ -47,42 +41,64 @@ function showPosition(position) {
   }());
 }
 
+$('#sendRegistrationNumber').click(function(e){
+  localStorage.setItem("DahRegistrationNumber",$('#registrationNumber').val());
+  $(this).addClass('disabled');
+  sendToSlack();
+  e.preventDefault();
+  
+});
+
+function locationValue(){
+  if(localStorage.getItem("DahCrdLat")!==null) {
+    return "http://www.google.com/maps/place/" + localStorage.getItem("DahCrdLat") + "," + localStorage.getItem("DahCrdLon")
+  } else {
+    return "Location not available"
+  }
+}
+
+function sendToSlackSuccess() {
+  setTimeout(function () {
+    window.location.replace("complete.html");
+  }, 1000);
+}
+
 function sendToSlack() {
   var url = "https://hooks.slack.com/services/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";
-  var text = result;
   $.ajax({
       data: 'payload=' + JSON.stringify({
         "attachments": [
-            {
-                "color": "#F50A37",
-                "title": "RSA Request",
-                "fields": [
-                    {
-                        "title": "Phone number",
-                        "value": phonenumber,
-                        "short": true
-                    },
-            {
-                        "title": registrationNumber,
-                        "value": "value",
-                        "short": true
-                    },
-                    {
-                        "title": "Show direction",
-                        "value": "http://www.google.com/maps/place/" + crdLat + "," + crdLon,
-                        "short": true
-                    },
-            {
-                        "title": "Show location",
-                        "value": "value",
-                        "short": true
-                    }
-                ]        
-        }
+          {
+            "color": "#F50A37",
+            "title": "RSA Request",
+            "fields": [
+              {
+                "title": "Phone number",
+                "value": localStorage.getItem("DahPhoneNumber"),
+                "short": true
+              },
+              {
+                "title": "Registration number",
+                "value": localStorage.getItem("DahRegistrationNumber"),
+                "short": true
+              },
+              {
+                "title": "Show location",
+                "value": locationValue(),
+                "short": true
+              },
+              {
+                "title": "Source",
+                "value": "Via Web",
+                "short": true
+              }
+            ]        
+          } 
         ]
       }),
       dataType: 'json',
       processData: false,
+      success: sendToSlackSuccess(), 
       type: 'POST',
       url: url
   });

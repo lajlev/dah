@@ -39,65 +39,18 @@
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
-        "file": "maps.pug",
-        "sha": "a274c05d8ad0d8fbc0786bc2aa52a068fba9948d"
-      },
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "910b8a358040d7d4dd6bc0a436b4e4c1ee371910",
-    "input": "maps.pug",
-    "output": [
-      "maps.html"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
         "file": "registration-number.pug",
-        "sha": "7b4563c4b2305381f1caa7bb1db8674af477de89"
+        "sha": "e1237effafd7511ae2739ba41e445b75e964957f"
       },
       {
         "file": "layout/master.pug",
         "sha": "9d568230a9fad738575fa35e33e341175cc49920"
       }
     ],
-    "outputSha": "8e18897fb2f6a0943545642c56f73556c76b82cd",
+    "outputSha": "0673bc426fcc10cd17ada102ff652119580f8b3c",
     "input": "registration-number.pug",
     "output": [
       "registration-number.html"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "7b31a18c2130ee2a0269dbf95eb29daa0482862e",
-    "input": "layout/master.pug",
-    "output": [
-      "layout/master.html"
-    ]
-  },
-  {
-    "type": "::map::minify",
-    "inputSha": [
-      {
-        "file": "scripts/main.js",
-        "sha": "dae4570807a0e701a542f723781075efe7aa76f1"
-      }
-    ],
-    "outputSha": "30ba67c581d2070d6b6510f80f377c25e9a6e30e",
-    "input": "scripts/main.js",
-    "output": [
-      "scripts/main.js.map",
-      "scripts/main.js"
     ]
   },
   {
@@ -105,14 +58,14 @@
     "inputSha": [
       {
         "file": "styles/main.scss",
-        "sha": "cec9c076aec787eeeb91c9bdf12a76336beb3054"
+        "sha": "73a3cf66070d956b355af703a399457977fea136"
       },
       {
         "file": "styles/reset.scss",
         "sha": "bcaeb4314baec4cd2031fb9daac3daf6d645755a"
       }
     ],
-    "outputSha": "2c7069a1b90dfe468a49565104bbf814f8e5a1fd",
+    "outputSha": "452d6c4e2ef52d85d0c7ba746c705834eaac246f",
     "input": "styles/main.scss",
     "output": [
       "styles/main.css.map",
@@ -132,6 +85,35 @@
     "output": [
       "styles/reset.css.map",
       "styles/reset.css"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.js",
+        "sha": "bb0b6f95a3db6e32c34d9b6cd4734970b2201343"
+      }
+    ],
+    "outputSha": "621c071dd364cdd7d7ed38573dd3d404eaa19fb2",
+    "input": "scripts/main.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "layout/master.pug",
+        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
+      }
+    ],
+    "outputSha": "7b31a18c2130ee2a0269dbf95eb29daa0482862e",
+    "input": "layout/master.pug",
+    "output": [
+      "layout/master.html"
     ]
   }
 ]
