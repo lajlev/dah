@@ -64,7 +64,7 @@ function sendToSlackSuccess() {
 }
 
 function sendToSlack() {
-  var url = "https://hooks.slack.com/services/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";
+  var url = "https://hooks.slack.com/services/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";
   $.ajax({
       data: 'payload=' + JSON.stringify({
         "attachments": [
