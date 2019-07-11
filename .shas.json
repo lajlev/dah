@@ -3,24 +3,6 @@
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
-        "file": "complete.pug",
-        "sha": "cf956ec73fd76645361dade88a796777abf0c00b"
-      },
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "dd57cae66e362ebeb11080243b1a361c5361a763",
-    "input": "complete.pug",
-    "output": [
-      "complete.html"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
         "file": "index.pug",
         "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
       },
@@ -39,6 +21,24 @@
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
+        "file": "complete.pug",
+        "sha": "cf956ec73fd76645361dade88a796777abf0c00b"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
+      }
+    ],
+    "outputSha": "dd57cae66e362ebeb11080243b1a361c5361a763",
+    "input": "complete.pug",
+    "output": [
+      "complete.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
         "file": "registration-number.pug",
         "sha": "e1237effafd7511ae2739ba41e445b75e964957f"
       },
@@ -51,6 +51,21 @@
     "input": "registration-number.pug",
     "output": [
       "registration-number.html"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.js",
+        "sha": "e72bec3ce980c2c1fdc4d80451ceb1851a0b5e94"
+      }
+    ],
+    "outputSha": "d9e8cf719af23d466efdc583ff348b279c7fcf75",
+    "input": "scripts/main.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
     ]
   },
   {
@@ -99,21 +114,6 @@
     "output": [
       "styles/reset.css.map",
       "styles/reset.css"
-    ]
-  },
-  {
-    "type": "::map::minify",
-    "inputSha": [
-      {
-        "file": "scripts/main.js",
-        "sha": "9952b0fffd09c139cd754765899127e7b5110f54"
-      }
-    ],
-    "outputSha": "b6e53f1ec2c786f7d0837028d0b33d68350fb945",
-    "input": "scripts/main.js",
-    "output": [
-      "scripts/main.js.map",
-      "scripts/main.js"
     ]
   }
 ]
