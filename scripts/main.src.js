@@ -51,7 +51,7 @@ $('#sendRegistrationNumber').click(function(e){
 
 function locationValue(){
   if(localStorage.getItem("DahCrdLat")!==null) {
-    return "http://www.google.com/maps/place/" + localStorage.getItem("DahCrdLat") + "," + localStorage.getItem("DahCrdLon")
+    return "https://www.openstreetmap.org/?mlat=" + localStorage.getItem("DahCrdLat") + "&mlon=" + localStorage.getItem("DahCrdLon") + "&zoom=14";
   } else {
     return "Location not available"
   }

@@ -3,24 +3,6 @@
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
-        "file": "index.pug",
-        "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
-      },
-      {
-        "file": "layout/master.pug",
-        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
-      }
-    ],
-    "outputSha": "3a8b28a0f6a52c22de9a51f8b986ef3539732dbf",
-    "input": "index.pug",
-    "output": [
-      "index.html"
-    ]
-  },
-  {
-    "type": "pug@2.0.4::map::minify",
-    "inputSha": [
-      {
         "file": "complete.pug",
         "sha": "cf956ec73fd76645361dade88a796777abf0c00b"
       },
@@ -33,6 +15,24 @@
     "input": "complete.pug",
     "output": [
       "complete.html"
+    ]
+  },
+  {
+    "type": "pug@2.0.4::map::minify",
+    "inputSha": [
+      {
+        "file": "index.pug",
+        "sha": "bd58605ebad6ba63372f36da9ba9fc4e9718aedb"
+      },
+      {
+        "file": "layout/master.pug",
+        "sha": "9d568230a9fad738575fa35e33e341175cc49920"
+      }
+    ],
+    "outputSha": "3a8b28a0f6a52c22de9a51f8b986ef3539732dbf",
+    "input": "index.pug",
+    "output": [
+      "index.html"
     ]
   },
   {
@@ -54,21 +54,6 @@
     ]
   },
   {
-    "type": "::map::minify",
-    "inputSha": [
-      {
-        "file": "scripts/main.js",
-        "sha": "e72bec3ce980c2c1fdc4d80451ceb1851a0b5e94"
-      }
-    ],
-    "outputSha": "d9e8cf719af23d466efdc583ff348b279c7fcf75",
-    "input": "scripts/main.js",
-    "output": [
-      "scripts/main.js.map",
-      "scripts/main.js"
-    ]
-  },
-  {
     "type": "pug@2.0.4::map::minify",
     "inputSha": [
       {
@@ -80,6 +65,21 @@
     "input": "layout/master.pug",
     "output": [
       "layout/master.html"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.js",
+        "sha": "c30f2afe088e8e724ce4166e0b54dde6d5cd1d1a"
+      }
+    ],
+    "outputSha": "90a5e2f6944cadc990b968762a74db5de474da92",
+    "input": "scripts/main.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
     ]
   },
   {
