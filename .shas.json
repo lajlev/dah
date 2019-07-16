@@ -68,21 +68,6 @@
     ]
   },
   {
-    "type": "::map::minify",
-    "inputSha": [
-      {
-        "file": "scripts/main.js",
-        "sha": "c30f2afe088e8e724ce4166e0b54dde6d5cd1d1a"
-      }
-    ],
-    "outputSha": "90a5e2f6944cadc990b968762a74db5de474da92",
-    "input": "scripts/main.js",
-    "output": [
-      "scripts/main.js.map",
-      "scripts/main.js"
-    ]
-  },
-  {
     "type": "node-sass@4.12.0::map::minify",
     "inputSha": [
       {
@@ -114,6 +99,21 @@
     "output": [
       "styles/reset.css.map",
       "styles/reset.css"
+    ]
+  },
+  {
+    "type": "::map::minify",
+    "inputSha": [
+      {
+        "file": "scripts/main.js",
+        "sha": "dc48379aaa4b34054c324e023ba4098a328845e3"
+      }
+    ],
+    "outputSha": "daa26d3472df45da266c82a46bb38e0227ea7b13",
+    "input": "scripts/main.js",
+    "output": [
+      "scripts/main.js.map",
+      "scripts/main.js"
     ]
   }
 ]

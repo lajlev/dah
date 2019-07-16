@@ -51,7 +51,8 @@ $('#sendRegistrationNumber').click(function(e){
 
 function locationValue(){
   if(localStorage.getItem("DahCrdLat")!==null) {
-    return "https://www.openstreetmap.org/?mlat=" + localStorage.getItem("DahCrdLat") + "&mlon=" + localStorage.getItem("DahCrdLon") + "&zoom=14";
+    return encodeURIComponent("https://www.openstreetmap.org/?mlat=" + localStorage.getItem("DahCrdLat") + "&mlon=" + localStorage.getItem("DahCrdLon") + "&zoom=14");
+    //return "http://www.google.com/maps/place/" + localStorage.getItem("DahCrdLat") + "," + localStorage.getItem("DahCrdLon");
   } else {
     return "Location not available"
   }
@@ -65,37 +66,42 @@ function sendToSlackSuccess() {
 
 function sendToSlack() {
   var url = "https://hooks.slack.com/services/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";
-  $.ajax({
-      data: 'payload=' + JSON.stringify({
-        "attachments": [
+
+  var slackJson = JSON.stringify({
+    "attachments": [
+      {
+        "color": "#F50A37",
+        "title": "RSA Request",
+        "fields": [
           {
-            "color": "#F50A37",
-            "title": "RSA Request",
-            "fields": [
-              {
-                "title": "Phone number",
-                "value": localStorage.getItem("DahPhoneNumber"),
-                "short": true
-              },
-              {
-                "title": "Registration number",
-                "value": localStorage.getItem("DahRegistrationNumber"),
-                "short": true
-              },
-              {
-                "title": "Show location",
-                "value": locationValue(),
-                "short": true
-              },
-              {
-                "title": "Source",
-                "value": "Via Web",
-                "short": true
-              }
-            ]        
-          } 
-        ]
-      }),
+            "title": "Phone number",
+            "value": localStorage.getItem("DahPhoneNumber"),
+            "short": true
+          },
+          {
+            "title": "Registration number",
+            "value": localStorage.getItem("DahRegistrationNumber"),
+            "short": true
+          },
+          {
+            "title": "Show location",
+            "value": locationValue(),
+            "short": true
+          },
+          {
+            "title": "Source",
+            "value": "Via Web",
+            "short": true
+          }
+        ]        
+      } 
+    ]
+  });
+
+  console.log(slackJson);
+
+  $.ajax({
+      data: 'payload=' + slackJson,
       dataType: 'json',
       processData: false,
       success: sendToSlackSuccess(), 
